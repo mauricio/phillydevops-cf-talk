@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Auto-scaling, Queues and CloudFormations to Slash Costs at Neat</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="How Neat uses cloud-formations to slash costs and simplify stack creation">
+		<meta name="author" content="Maurício Linhares">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -40,339 +40,424 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
 
 				<section>
-					<h2>Hello There</h2>
+					<h1>Auto-scaling, Queues and CloudFormations to Slash Costs at Neat</h1>
 					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+						<small>
+							<a href="http://mauricio.github.io/">Maurício Linhares</a> /
+							<a href="http://twitter.com/mauriciojr">@mauriciojr</a> /
+							<a href="http://neat.com/">neat.com</a>
+						</small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Point of View</h2>
+					<h1>Who?</h1>
 					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
+						<ul>
+							<li>Technical Lead at Neat.com</li>
+							<li>Brazilian from João Pessoa, not from Rio de Janeiro or São Paulo</li>
+							<li>Moved here 8 weeks ago</li>
+							<li>Can't speak Spanish, sorry</li>
+						</ul>
 					</p>
+				</section>
+
+				<section data-background="images/where-i-am-from.jpg">
+				</section>
+
+				<section>
+					<h1>Where were we 2.5 years ago?</h1>
+				</section>
+
+				<section data-background-video="videos/burn.mp4" data-background-color="#000000">
+				</section>
+
+				<section>
+					<h1>Why were we burning money?</h1>
+				</section>
+
+				<section data-background="images/messages-plot.png">
+				</section>
+
+				<section data-background="images/plot-weekends.png">
+				</section>
+
+				<section>
+					<h1>No auto-scaling means...</h1>
+				</section>
+
+				<section data-background="images/messages-plot-comments.png">
+				</section>
+
+				<section>
+					<h1>Unexpected traffic spike?</h1>
 					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
+						Just go there and provision a bunch of new machines. And please remember to take them down once the spike is over!
 					</p>
 				</section>
 
 				<section>
-					<h2>Touch Optimized</h2>
+					<h1>We were running at an Elastic Computing Cloud</h1>
 					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
+						But our systems were not making use of this elasticity...
 					</p>
 				</section>
 
 				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+					<h1>What did we need?</h1>
+					<ul>
+						<li>Quickly provisionable machines</li>
+						<li>Auto-scaling groups</li>
+						<li>Queues and queue metrics</li>
+						<li>All organized together with CloudFormations</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
+					<h1>First step?</h1>
+					<p>
+						Revamp the provisioning process.
+					</p>
+				</section>
 
-    var nodes = document.querySelectorAll( selector );
+				<section>
+					<h1>Original process</h1>
+					<ul>
+						<li>Use Knife and Chef to build an instance for a service out of a bare bones AMI</li>
+						<li>All steps, from installing software to setting up config happen at this point</li>
+						<li>Slow, many minutes from nothing to instance running</li>
+						<li>Not reproductible - machines provisioned at different points in time will have different versions of their libraries</li>
+					</ul>
+				</section>
 
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
+				<section>
+					<h1>Doesn't work for auto-scaling</h1>
+					<p>
+						When you're auto-scaling to meet real time customer demand, you can't waste any time.
+					</p>
+				</section>
 
-      if( !node.className ) {
-        node.className += ' roll';
+				<section>
+					<h1>Pre-made AMIs/images enter the scene</h1>
+					<pre><code class="shell" data-trim contenteditable style="font-size: 18px;">
+k mint spi -b SPI-Bundle-RELEASE-1.5.370-NSDK-4.0.0.242
+</code></pre>
+				</section>
+
+				<section>
+					<h1>The Golden AMI</h1>
+					<ul>
+						<li>A specific version of the software required gets installed</li>
+						<li>No environment-specific configuration exists yet</li>
+						<li>Once booted in an actual environment, machine uses user-data to figure out where to pull config and starts it's work</li>
+						<li>Fast and reproductible, all instances are the same</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>User data as JSON</h1>
+					<pre><code class="json" data-trim contenteditable style="font-size: 18px;">
+{
+  "environment" : "production",
+  "role" : "thumbnailer"
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h1>Chef kicks off and figures out what to do</h1>
+					<p>
+						A separate script reads the user data, calls Chef using the given role and environment. Instance gets configured and services are ready to action.
+					</p>
+				</section>
+
+				<section>
+					<h1>Auto-scaling groups arrive</h1>
+					<ul>
+						<li>Collection of machines instanciated out of a specific configuration</li>
+						<li>Register machines at an ELB if you need it</li>
+						<li>Simple (and mostly useless) health check process</li>
+						<li>Really, that's all</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Alarms, metrics and scaling policies</h1>
+					<p>
+						This is where it gets interesting.
+					</p>
+				</section>
+
+				<section>
+					<h1>Pick a metric</h1>
+					<p>
+						It has to be in CloudWatch but you can push anything there. Using a metric that is already provided by AWS is always simpler.
+					</p>
+				</section>
+
+				<section>
+					<h1>Setup alarms and scaling policies</h1>
+					<p>
+						Alarms trigger actions when their threshold is met.
+					</p>
+				</section>
+
+				<section>
+					<pre><code class="json" data-trim contenteditable style="font-size: 18px;">
+"ScaleUpWorkerAlarm": {
+  "Type": "AWS::CloudWatch::Alarm",
+  "Properties": {
+    "AlarmDescription": "Scale-Up if queue depth exceeds our limit",
+    "Namespace": "AWS/SQS",
+    "MetricName": "ApproximateNumberOfMessagesVisible",
+    "Dimensions": [
+      {
+        "Name": "QueueName",
+        "Value": "MyQueue"
       }
-    }
+    ],
+    "Statistic": "Average",
+    "Period": "60",
+    "EvaluationPeriods": "3",
+    "Threshold": 100,
+    "ComparisonOperator": "GreaterThanThreshold",
+    "AlarmActions": [
+      {
+        "Ref": "WorkerScaleUpPolicy"
+      }
+    ]
   }
 }
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+</code></pre>
 				</section>
 
 				<section>
-					<h2>Marvelous List</h2>
+<pre><code class="json" data-trim contenteditable style="font-size: 18px;">
+"WorkerScaleUpPolicy": {
+	"Type": "AWS::AutoScaling::ScalingPolicy",
+	"Properties": {
+		"AdjustmentType": "ChangeInCapacity",
+		"AutoScalingGroupName": {
+			"Ref": "WorkerAutoScalingGroup"
+		},
+		"Cooldown": 300,
+		"ScalingAdjustment": 1
+	}
+}
+</code></pre>
+				</section>
+
+				<section>
+					<h1>Working together</h1>
+					<p>
+						Metrics, alarms and policies work together to make your auto-scaling group grow or shrink as needed. You can have as many alarms, metrics and policies as you want, just make sure they actually represent how you want your app to grow.
+					</p>
+				</section>
+
+				<section>
+					<h1>Ok, lots of different parts, how do we tie them together?</h1>
+				</section>
+
+				<section data-background="images/fail-cloud.png" style="color: yellow;">
+				</section>
+
+				<section>
+					<h1>What are CloudFormations?</h1>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>Templated (JSON) AWS resources</li>
+						<li>Supports declaring most of the existing services and config options</li>
+						<li>Removes the need to perform manual steps to setup services your app needs</li>
+						<li>Creates whole, isolated, environments</li>
+						<li>Configurable with external parameters and mappings inside the template</li>
 					</ul>
 				</section>
 
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
+					<h1>Unified resource creation</h1>
 					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
+						Resource creation was all over the place, now only CloudFormations do it.
 					</p>
 				</section>
 
 				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-					<iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
+					<h1>Answers the <em>What does this app needs?</em> question</h1>
 					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
+						Now you just open the CloudFormations associated with it and it should be there.
 					</p>
 				</section>
 
 				<section>
-					<h2>Much more</h2>
+					<h1>No more <em>all access</em> keys for apps</h1>
+					<p>
+						Templates must include their own security policies and allow access only to resources they themselves create, using IAM (Identity and Access Management) profiles.
+					</p>
+				</section>
+
+				<section>
+					<h1>And what happened to our story?</h1>
+					<p>
+						The service went from being manually provisioned and scaled to a full fledged auto-scaling solution. It now runs at 1/2 of the original cost and served as an example for all new services being created.
+					</p>
+				</section>
+
+				<section>
+					<h1>Is this the end?</h1>
+				</section>
+
+				<section
+					data-background="images/nope.jpg"
+					data-background-size="600px">
+				</section>
+
+				<section>
+					<h1>We're still learning how CloudFormations work</h1>
+					<p>
+						and being bitten every once in a while.
+					</p>
+				</section>
+
+				<section>
+					<h1>What did we learn so far at Neat?</h1>
+				</section>
+
+				<section>
+					<h1>Do not name stuff</h1>
+					<p>
+						If AWS can generate a name for it, <strong>do not name it</strong>. Use CloudFormation outputs to get their names.
+					</p>
+				</section>
+
+				<section>
+					<h1>Avoid nesting or cross-CF dependencies</h1>
+					<p>
+						If you really need to do it make sure the dependency tree is shallow or you will have trouble.
+					</p>
+				</section>
+
+				<section>
+					<h1>Separate stuff that changes frequently from the ones that do not</h1>
+					<p>
+						Don't place your RDS database at the same template as your webapp auto-scaling group.
+					</p>
+				</section>
+
+				<section>
+					<h1>Do not upload templates directly, build tools to do it</h1>
+					<p>
+						And make sure these tools understand how to name stacks and validate parameters.
+					</p>
+					<pre><code class="json" data-trim contenteditable style="font-size: 18px;">
+k cfn id2 server update -e qa -c neat
+					</code>
+					</pre>
+				</section>
+
+				<section>
+					<h1>Create two auto-scaling groups to simplify zero-downtime deployments</h1>
+					<p>
+						Whenever you want to deploy something, scale up the group that is not currently scaled and then scale down the one that was.
+					</p>
+				</section>
+
+				<section>
+					<h1>Use IAM profiles for everything</h1>
+					<p>
+						Yes, I'm repeating this.
+					</p>
+				</section>
+
+				<section>
+					<h1>Create and hook up MANY alarms to your monitoring service</h1>
+					<p>
+						We're all humans, send notifications for more than one threshold to make sure they won't be snoozed into oblivion.
+					</p>
+				</section>
+
+				<section>
+					<h1>Make sure your logs are going somewhere</h1>
+					<p>
+						Because all machines die.
+					</p>
+				</section>
+
+				<section>
+					<h1>What about problems?</h1>
+				</section>
+
+				<section>
+					<h1>There's no diff</h1>
+					<p>
+						Want to figure out what will change between the current template and the one deployed? Run it. If Justin Campbell was here he would say Terraform has diffs.
+					</p>
+				</section>
+
+				<section>
+					<h1>If a resource is deleted out of the CF...</h1>
+					<p>
+						You'll be in for a lot of trouble.
+					</p>
+				</section>
+
+				<section>
+					<h1>JSON is verbose and doesn't take comments or documentation</h1>
+					<p>
+						But are tools to use other languages like Python or Ruby to declare templates.
+					</p>
+				</section>
+
+				<section>
+					<h1>Not all features are there yet</h1>
+					<p>
+						S3 notifications still don't have all the options available at the console/API.
+					</p>
+				</section>
+
+				<section>
+					<h1>Whats next for us?</h1>
+				</section>
+
+				<section>
+					<h1>Preemptive scaling</h1>
+					<p>
+						We already have the numbers and the usage patterns are quite consistent, scaling up based on time means customers wait even less when they actually start to use the app.
+					</p>
+				</section>
+
+				<section>
+					<h1>Move the monolith</h1>
+					<p>
+						While all new apps have moved to CF-based setups, our monolith is still work in progress, but we will get there.
+					</p>
+				</section>
+
+				<section>
+					<h1>Better custom health-check for instances</h1>
+					<p>
+						Right now the health checks are rudimentar and not very effective and spotting instances that are misbehaving.
+					</p>
+				</section>
+
+				<section>
+					<h1>This was a team effort</h1>
 					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+						<li>Bruce Willke Jr.</li>
+						<li>Kevin Lee</li>
+						<li>Richard Henning</li>
+						<li>Sarah Gray</li>
+						<li>Shairon Toledo</li>
+						<li>Todd Davenport</li>
+						<li>Travis Truman</li>
 					</ul>
 				</section>
 
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+				<section>
+					<h1>Thanks!</h1>
 				</section>
 
 			</div>
